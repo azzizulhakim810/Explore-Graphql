@@ -15,7 +15,7 @@ const GET_ALL_BOOKS = gql`
 const DisplayData = () => {
   const { loading, error, data } = useQuery(GET_ALL_BOOKS);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading....</p>;
   if (error) return <p>Error : {error.message}</p>;
   // if (data) return console.log(data.getBooks);
   return data?.getBooks?.map(({ _id, name, author, price }) => (
